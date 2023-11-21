@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Usuario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="index.html">
+                    <p>INICIO</p>
+                </a>
+                <nav id="navegacion" class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="formulario.html">Formulario</a>
+                </nav>
+            </div>
+            <h2>Formulario Para Proximos Juegos</h1>
+        </div>
+    </header>
+
+    <main class="seccion contenedor">
+        <form action="procesar_formulario.php" method="post">
+            <p for="nombre">Nombre:</p>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <p for="apellido">Apellido:</p>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <p for="email">Correo Electrónico:</p>
+            <input type="text" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+
+            <p for="telefono">Teléfono:</p>
+            <input type="text" id="telefono" name="telefono" pattern="\d{10}" required>
+
+            <p for="edad">Edad:</p>
+            <input type="text" id="edad" name="edad" pattern="\d{1,2}" required>
+
+            <p>Géneros de Videojuegos Favoritos:</p>
+            <div>
+                <input type="checkbox" id="accion" name="generos[]" value="Acción">
+                <label for="accion">Acción</label>
+            </div>
+            <div>
+                <input type="checkbox" id="aventura" name="generos[]" value="Aventura">
+                <label for="aventura">Aventura</label>
+            </div>
+            <div>
+                <input type="checkbox" id="rol" name="generos[]" value="Rol">
+                <label for="rol">Rol</label>
+            </div>
+            <div>
+                <input type="checkbox" id="estrategia" name="generos[]" value="Estrategia">
+                <label for="estrategia">Estrategia</label>
+            </div>
+            <div>
+                <input type="checkbox" id="deportes" name="generos[]" value="Deportes">
+                <label for="deportes">Deportes</label>
+            </div>
+            <div>
+                <input type="checkbox" id="simulacion" name="generos[]" value="Simulación">
+                <label for="simulacion">Simulación</label>
+            </div>
+            <div>
+                <input type="checkbox" id="terror" name="generos[]" value="Terror">
+                <label for="terror">Terror</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cienciaFiccion" name="generos[]" value="Ciencia Ficción">
+                <label for="cienciaFiccion">Ciencia Ficción</label>
+            </div>
+            <div>
+                <input type="checkbox" id="musical" name="generos[]" value="Musical">
+                <label for="musical">Musical</label>
+            </div>
+            <div>
+                <input type="checkbox" id="indie" name="generos[]" value="Indie">
+                <label for="indie">Indie</label>
+            </div>
+
+            <p>Recomendarías esta página:</p>
+                <div>
+                    <input type="radio" id="si" name="recomendacion" value="si">
+                    <label for="si">Sí</label>
+                </div>
+                <div>
+                    <input type="radio" id="no" name="recomendacion" value="no">
+                    <label for="no">No</label>
+                </div>
+            </div>
+            
+            <textarea name="resena" id="resena" cols="30" rows="10" placeholder="Escribe tu formulario.html aquí..."></textarea>
+
+            <input type="submit" value="Enviar Datos" class="boton boton-verde">
+        </form>
+    </main>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="formulario.html">Formulario</a>
+            </nav>
+            <p class="copyright">Todos los derechos reservados a David Castro 2023 &copy;</p>
+        </div>
+    </footer>
+
+</body>
+</html>

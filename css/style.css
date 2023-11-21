@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+/* Reset de estilos y configuración de la caja del modelo de contenido */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/* Aplica el box-sizing a todos los elementos y sus pseudoelementos */
+*, *::before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background: #232220;
+}
+
+img {
+    max-width: 101%;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1, h2, h4 {
+    font-size: 3.8rem;
+    color: #fff;
+}
+h3{
+    font-size: 3.2vh;
+    color: #fff;
+}
+
+p {
+    color: #fff;
+}
+
+label{
+    color: #fff;
+}
+a {
+    text-decoration: none;
+}
+
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.reseña{
+    background-image: url(../img/encuentra.jpg);
+}
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+
+.boton {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    display: block;
+}
+
+/* Estilos específicos para el botón en pantallas más grandes */
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+
+.boton:hover {
+    cursor: pointer;
+}
+
+/* Estilos para botones de colores específicos */
+.boton-amarillo {
+    background-color: #00ad26;
+}
+
+.boton-verde {
+    background-color: #00ad26;
+}
+
+.site-header {
+    background-color: #333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio {
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+        url(../img/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 60rem;
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    }
+}
+
+.contenido-header h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 76px;
+    line-height: 1.2;
+    font-weight: 700;
+    padding-top: 100px;
+}
+.barra {
+    padding-top: 1rem;
+}
+
+/* Configuración de la barra de navegación en pantallas más grandes */
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.navegacion a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+}
+
+/* Configuración de los enlaces de navegación en pantallas más grandes */
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+    }
+
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+
+.navegacion a:hover {
+    color: #00ad26;
+}
+.barra p:hover{
+    color: #00ad26;
+}
+
+/* Estilos para el menú móvil */
+.mobile-menu img {
+    width: 5rem;
+}
+
+/* Oculta el menú móvil en pantallas más grandes */
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Configuración para mostrar la navegación al hacer clic en el menú móvil */
+.navegacion:target {
+    display: block;
+}
+
+.navegacion {
+    display: none;
+}
+
+/* Muestra la navegación en pantallas más grandes */
+@media (min-width: 768px) {
+    .navegacion {
+        display: block;
+    }
+}
+
+/* Configuración adicional para pantallas más grandes */
+@media (min-width: 768px)  {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* Estilos para los íconos y su distribución en pantallas más grandes */
+.icono {
+    text-align: center;
+}
+
+/* Configuración adicional para pantallas más grandes */
+@media (min-width: 768px){
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+
+.icono h3 {
+    text-transform: uppercase;
+}
+
+/* Configuración adicional para pantallas más grandes */
+@media (min-width: 768px) {
+    .contenedor-anuncios{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+.anuncio {
+    border: 1px solid var(--border-color-light);
+    background-color: #282828;
+    margin-bottom: 2rem;
+}
+
+/* Configuración adicional para pantallas más grandes */
+@media (min-width: 768px) {
+    .anuncio {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    margin: 0;
+}
+
+.precio {
+    color: #00ad26;
+    font-weight: 700;
+}
+
+.iconos-caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px;
+}
+
+.iconos-caracteristicas li {
+    display: flex;
+}
+.iconos-caracteristicas li img {
+    margin-right: 2rem;
+}
+
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagen-contacto {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.3),rgba(0,0,0,0.3)
+    ), url(../img/encuentra.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.imagen-contacto:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.663); /* Ajusta el color y la opacidad aquí */
+}
+
+.contenido-contacto {
+    flex: 0 0 95%;
+    color: #fff;
+    z-index: 1;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
+    
+}
+
+/* Configuración adicional para pantallas más grandes */
+@media (min-width: 768px) {
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .seccion-inferior .blog {
+        flex-basis: 60%;
+    }
+}
+
+.entrada-blog {
+    margin-bottom: 2rem;
+}
+
+/* Configuración adicional para pantallas más grandes */
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* Estilos específicos para la última entrada del blog en pantallas más grandes */
+.entrada-blog:last-of-type{
+    margin-bottom: 0;
+}
+
+/* Configuración adicional para pantallas más grandes */
+@media (min-width: 768px) {
+    .entrada-blog .imagen {
+        flex-basis: 40%;
+    }
+
+    .entrada-blog .texto-entrada {
+        flex-basis: calc(60% - 3rem);
+    }
+}
+
+.texto-entrada a {
+    color: #000;
+    text-decoration: none;
+}
+
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.texto-entrada h4::after {
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background: #00ad26;
+}
+
+
+.texto-entrada span {
+    color: #00ad26;
+}
+
+/* Estilos para el pie de página del sitio */
+.site-footer {
+    background: #333;
+    margin: 0;
+}
+
+.contenedor-footer {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+/* Configuración adicional para pantallas más grandes */
+@media (min-width: 768px) {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-footer nav {
+    display: none;
+}
+
+/* Muestra la navegación dentro del pie de página en pantallas más grandes */
+@media (min-width: 768px) {
+    .site-footer nav {
+        display: block;
+    }
+}
+
+.copyright {
+    margin: 0;
+    color: #ffff;
+}
+
+/* Configuración adicional para pantallas más grandes */
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+}
+.texto-nosotros blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+    color: #fff;
+}
+form textarea {
+    width: 100%;
+    margin-right: 20px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
